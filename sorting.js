@@ -6,13 +6,10 @@ var students = [
 ];
 
 students.sort(function(a,b){
-  if (a.age > b.age){
-    return -1;
+  if(a.name.toLowerCase() === b.name.toLowerCase()){
+    return b.age-a.age
   }
-  if (a.age < b.age){
-    return 1;
-  }
-  return 0;
+  return a.name > b.name
 })
 
 console.log(students) 
